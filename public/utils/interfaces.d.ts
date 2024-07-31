@@ -16,3 +16,13 @@ export interface iHiwData {
   sm?: string | ReactNode;
   img?: string;
 }
+
+export interface iTrend {
+  bigImg?: string;
+  mdImageOne?: string;
+  mdImageTwo?: string;
+  smallImg?: string;
+  remain?: string;
+  b?: string;
+  sm?: string;
+}

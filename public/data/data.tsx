@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { iHiwData, iMarketData } from "../utils/interfaces";
+import { iHiwData, iMarketData, iTrend } from "../utils/interfaces";
 
 export const marketData: iMarketData[] = [
   {
@@ -81,5 +81,35 @@ export const hiwBusinessData: iHiwData[] = [
     ),
 
     img: "/assets/badge.png",
+  },
+];
+
+export const trendData: iTrend[] = [
+  {
+    bigImg: "/assets/card_one.png",
+    mdImageOne: "/assets/inner_one.png",
+    mdImageTwo: "/assets/inner_two.png",
+    remain: "32pc",
+    smallImg: "/assets/small_inner.png",
+    b: "Akure TechHub",
+    sm: "ATHC",
+  },
+  {
+    bigImg: "/assets/fitness.png",
+    mdImageOne: "/assets/mushoom_small.png",
+    mdImageTwo: "/assets/mushoom_small.png",
+    remain: "1025+",
+    smallImg: "/assets/small_inner.png",
+    b: "Fit Fam Lets Go",
+    sm: "iFitness",
+  },
+  {
+    bigImg: "/assets/film.png",
+    mdImageOne: "/assets/laka.png",
+    mdImageTwo: "/assets/gru.png",
+    remain: "32pc",
+    smallImg: "/assets/small_inner.png",
+    b: "Movies Coming",
+    sm: "Filmhous",
   },
 ];

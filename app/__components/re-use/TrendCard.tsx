@@ -1,12 +1,21 @@
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
 import Button from "./Button";
+import { iTrend } from "@/public/utils/interfaces";
 
-const TrendCard = () => {
+const TrendCard: FC<iTrend> = ({
+  b,
+  bigImg,
+  mdImageOne,
+  mdImageTwo,
+  remain,
+  sm,
+  smallImg,
+}) => {
   return (
     <div className="min-h-[550px] space-y-4 col-span-3 lg:col-span-1">
       <Image
-        src={"/assets/card_one.png"}
+        src={bigImg!}
         width={100}
         height={100}
         alt="Smart Dog NFT"
@@ -16,7 +25,7 @@ const TrendCard = () => {
 
       <div className="w-full grid grid-cols-3 gap-4">
         <Image
-          src={"/assets/inner_one.png"}
+          src={mdImageOne!}
           width={100}
           height={100}
           alt="Smart Cat NFT"
@@ -24,7 +33,7 @@ const TrendCard = () => {
           unoptimized
         />
         <Image
-          src={"/assets/inner_two.png"}
+          src={mdImageTwo!}
           width={100}
           height={100}
           alt="Smart Bear NFT"
@@ -33,20 +42,20 @@ const TrendCard = () => {
         />
         <Button className="flex items-center justify-center text-[20px]">
           {" "}
-          32pc
+          {remain}
         </Button>
       </div>
 
       <p className="text-sm">
         <b>
-          <big>Akure TechHub</big>
+          <big>{b}</big>
         </b>
       </p>
 
       <div className="flex items-center gap-3">
         <div className="p-2 bg-violet-500 rounded-[20px]">
           <Image
-            src={"/assets/small_inner.png"}
+            src={smallImg!}
             width={100}
             height={100}
             alt="Smart Cat NFT"
@@ -55,7 +64,7 @@ const TrendCard = () => {
           />
         </div>
 
-        <small>ATHC</small>
+        <small>{sm}</small>
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import Container from "./re-use/Container";
 import Image from "next/image";
 import Button from "./re-use/Button";
 import TrendCard from "./re-use/TrendCard";
+import { trendData } from "@/public/data/data";
+import { iTrend } from "@/public/utils/interfaces";
 
 const Trending = () => {
   return (
@@ -13,8 +15,8 @@ const Trending = () => {
       </div>
 
       <div className="w-full grid grid-cols-3 gap-8">
-        {Array.from({ length: 3 }).map((el: unknown, i: number) => (
-          <TrendCard key={i} />
+        {trendData.map((el: iTrend, i: number) => (
+          <TrendCard {...el} key={i} />
         ))}
       </div>
     </Container>
