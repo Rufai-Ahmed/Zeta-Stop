@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "./globals.css";
-import Header from "./__components/Header";
+import Header from "./__components/static/Header";
+import Footer from "./__components/static/Footer";
 
 const inter = Quicksand({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-[#2b2b2b]`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

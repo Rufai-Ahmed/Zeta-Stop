@@ -2,12 +2,13 @@ import React from "react";
 import { BiRocket } from "react-icons/bi";
 import Button from "./re-use/Button";
 import Image from "next/image";
+import Container from "./re-use/Container";
 
 const Hero = () => {
   return (
-    <main className="2xl:min-h-[800px] xl:min-h-[800px] lg w-[80%] grid grid-cols-2 mx-auto max-w-7xl items-center gap-5 text-white ">
-      <div className="space-y-5">
-        <h1 className="text-[55px] leading-[1] font-bold">
+    <Container className="grid grid-cols-2 items-center gap-5 text-white ">
+      <div className="space-y-5 col-span-2 lg:col-span-1">
+        <h1 className="text-[35px] lg:text-[55px] leading-[1] font-bold">
           Discover ZepaStops Near you & Rest while on your walks, Redeem
           Geo-Drops, Coupons and more
         </h1>
@@ -16,10 +17,11 @@ const Hero = () => {
           and more money in your wallet starts here. Collect, buy and sell your
           StepPower with more than 20000 partner businesses.
         </p>
-        <Button>
-          <BiRocket size={20} />7 For Businesses: Become a Partner
+        <Button className="text-[10px] gap-2 md:text-[16px] ">
+          <BiRocket size={12} />
+          <p>7 For Businesses: Become a Partner</p>
         </Button>
-        <div className="flex justify-between w-[50%]">
+        <div className="flex justify-between w-[100%] lg:w-[50%]">
           {[
             {
               b: "390k+",
@@ -42,19 +44,19 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="w-full  flex justify-end">
-        <div className="w-fit rounded-[30px] h-[500px] flex flex-col justify-start  bg-[#3b3b3b]">
-          <div className="h-[80%] flex items-center justify-center">
+      <div className="w-full col-span-2 lg:col-span-1 flex lg:justify-end ">
+        <div className="w-full rounded-[30px] h-[500px] grid grid-rows-10 bg-[#3b3b3b]">
+          <div className="row-span-6 md:row-span-8 flex items-center justify-center">
             <Image
               src={"/assets/zeta.png"}
               width={100}
               height={100}
               unoptimized
-              className="w-[500px] -mt-1 object-contain "
+              className="w-full h-full rounded-t-[30px] object-cover object-center "
               alt="Zeta"
             />
           </div>
-          <div className="h-[20%] w-full flex justify-center flex-col space-y-3 pl-8">
+          <div className="row-span-4 md:row-span-2 w-full flex justify-center flex-col space-y-3 pl-8 md:pr-0 pr-4">
             <p className="text-[20px]">
               <b>Trekking is Commodity Here</b>
             </p>
@@ -66,7 +68,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </main>
+    </Container>
   );
 };
 

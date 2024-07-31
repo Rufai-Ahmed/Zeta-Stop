@@ -11,7 +11,7 @@ const Button: FC<iButton> = ({ children, className, icon, ...props }) => {
         className
       )}
     >
-      {icon}
+      {icon && icon}
       {children}
     </button>
   );
