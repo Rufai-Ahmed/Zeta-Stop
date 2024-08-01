@@ -6,6 +6,7 @@ import MarketCard from "./re-use/MarketCard";
 import { marketData } from "@/public/data/data";
 import { iMarketData } from "@/public/utils/interfaces";
 import Image from "next/image";
+import { Carousel, CarouselContent } from "@/components/ui/carousel";
 
 const MarketPlace = () => {
   return (
@@ -25,20 +26,22 @@ const MarketPlace = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-3 gap-10">
-          {marketData.map((el: iMarketData, i: number) => (
-            <MarketCard key={i} {...el} />
-          ))}
-        </div>
+        <Carousel>
+          <CarouselContent className="ml-2 gap-5">
+            {marketData.map((el: iMarketData, i: number) => (
+              <MarketCard key={i} {...el} />
+            ))}
+          </CarouselContent>
+        </Carousel>
       </Container>
 
       <Image
-        src={"/assets/mushroom.png"}
-        width={1000}
-        height={1000}
+        src={"/assets/big_zepama.png"}
+        width={100}
+        height={100}
         unoptimized
-        className="w-full h-[400px] object-cover object-center "
-        alt={"Mushroom"}
+        className="w-full h-[900px] object-cover"
+        alt="big-zepama"
       />
     </>
   );

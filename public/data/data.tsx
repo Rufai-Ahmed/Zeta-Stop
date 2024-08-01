@@ -14,6 +14,10 @@ export const marketData: iMarketData[] = [
     name: "Airtel Data",
     img: "/assets/airtel.png",
   },
+  {
+    name: "Zepama Starter Pack",
+    img: "/assets/starter.png",
+  },
 ];
 
 export const hiwData: iHiwData[] = [

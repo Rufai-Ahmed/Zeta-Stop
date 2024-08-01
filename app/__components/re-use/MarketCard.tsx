@@ -1,11 +1,12 @@
+import { CarouselItem } from "@/components/ui/carousel";
 import { iMarketData } from "@/public/utils/interfaces";
 import Image from "next/image";
 import React, { FC } from "react";
 
 const MarketCard: FC<iMarketData> = ({ img, name }) => {
   return (
-    <div className="rounded-[30px] h-[500px] grid grid-rows-10 col-span-3 lg:col-span-1 bg-[#3b3b3b]">
-      <div className="row-span-7 flex items-center justify-center">
+    <CarouselItem className="rounded-[30px] h-[500px] grid grid-rows-10 pl-0 cursor-pointer bg-[#3b3b3b] md:basis-1/2 lg:basis-1/3 ">
+      <div className="row-span-7 w-full flex items-center justify-center ">
         <Image
           src={img!}
           width={100}
@@ -41,7 +42,7 @@ const MarketCard: FC<iMarketData> = ({ img, name }) => {
           </div>
         </div>
       </div>
-    </div>
+    </CarouselItem>
   );
 };
 

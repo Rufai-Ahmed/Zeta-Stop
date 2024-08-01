@@ -7,7 +7,7 @@ const Button: FC<iButton> = ({ children, className, icon, ...props }) => {
     <button
       {...props}
       className={twMerge(
-        "flex items-center rounded-[40px] gap-2 px-5 py-2 bg-violet-500",
+        "flex items-center rounded-[40px] gap-2 px-5 hover:scale-90 transition-all py-2 bg-violet-500",
         className
       )}
     >
