@@ -40,6 +40,7 @@ const config = {
       backgroundImage: {
         mushroom: "url('/assets/mushroom.png')",
         big_z: "url('/assets/big_zepama.png')",
+        bg_register: "url('/assets/bg_register.png')",
       },
       animation: {
         moveAndShrink: "moveAndShrink 4s infinite",

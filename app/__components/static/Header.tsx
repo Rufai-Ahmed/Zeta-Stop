@@ -19,7 +19,7 @@ const Header = () => {
           className="h-[80px] w-auto"
         />
 
-        <div className="flex items-center gap-7  ">
+        <div className="md:flex items-center gap-7  hidden  ">
           {["Find ZepaStops Nearby", "marketplace", "for businesses"].map(
             (el: string, i: number) => (
               <nav className="text-[16px] font-bold hidden lg:block" key={i}>
@@ -28,7 +28,10 @@ const Header = () => {
             )
           )}
 
-          <Button className="text-white" icon={<MdPerson size={20} />}>
+          <Button
+            className="text-white hidden md:flex"
+            icon={<MdPerson size={20} />}
+          >
             Connect Wallet
           </Button>
         </div>

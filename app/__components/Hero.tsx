@@ -4,10 +4,11 @@ import { BiRocket } from "react-icons/bi";
 import Button from "./re-use/Button";
 import Image from "next/image";
 import Container from "./re-use/Container";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <Container className="grid grid-cols-2 items-start pt-[130px] gap-5 text-white ">
+    <Container className="grid grid-cols-2 items-start pt-[80px] md:pt-[100px] lg:pt-[130px] gap-5 text-white ">
       <div className="space-y-5 col-span-2 lg:col-span-1">
         <h1 className="text-[35px] lg:text-[55px] leading-[1] font-bold">
           Discover ZepaStops Near you & Rest while on your walks, Redeem
@@ -35,9 +36,11 @@ const Hero = () => {
           and more money in your wallet starts here. Collect, buy and sell your
           StepPower with more than 20000 partner businesses.
         </p>
-        <Button className="text-[10px] gap-2 md:text-[16px] ">
-          <BiRocket size={12} />
-          <p>7 For Businesses: Become a Partner</p>
+        <Button className="text-[10px]  md:text-[16px] ">
+          <Link href={"/register"} className="flex items-center gap-2">
+            <BiRocket size={12} />
+            <p>7 For Businesses: Become a Partner</p>
+          </Link>
         </Button>
         <div className="flex justify-between w-[100%] lg:w-[50%]">
           {[
@@ -63,7 +66,7 @@ const Hero = () => {
       </div>
 
       <div className="w-full gap-8 col-span-2 flex-col lg:col-span-1 flex lg:items-end ">
-        <div className="w-[80%] rounded-[30px] h-[500px] grid grid-rows-10 bg-[#3b3b3b] hover:animate-none animate-moveAndShrink transform-origin-center">
+        <div className="w-full lg:w-[80%] rounded-[30px] h-[500px] grid grid-rows-10 bg-[#3b3b3b] hover:animate-none animate-moveAndShrink transform-origin-center">
           <div className="row-span-6 md:row-span-8 flex items-center justify-center ">
             <Image
               src={"/assets/zeta.png"}

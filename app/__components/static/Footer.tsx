@@ -4,6 +4,7 @@ import { BiStore } from "react-icons/bi";
 import { BsDiscord, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 import Button from "../re-use/Button";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -59,8 +60,19 @@ const Footer = () => {
 
         <hr className="bg-[#c5c5c5]" />
 
-        <div className="text-[14px]">
-          &copy; advancing together. we support eco-friendly initiatives.
+        <div className="flex flex-wrap xl:flex-nowrap space-y-4 xl:space-y-0 justify-between">
+          <div className="text-[14px]">
+            &copy; advancing together. we support eco-friendly initiatives.
+          </div>
+
+          <Image
+            src={"/assets/foot_img.png"}
+            width={100}
+            unoptimized
+            height={100}
+            alt="Foot Image"
+            className="w-auto"
+          />
         </div>
       </Container>
     </div>
