@@ -40,7 +40,7 @@ const MarketPlace = () => {
         width={100}
         height={100}
         unoptimized
-        className="w-full h-[900px] object-cover"
+        className="w-full  h-auto object-cover"
         alt="big-zepama"
       />
     </>
