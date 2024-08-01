@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Container from "../re-use/Container";
 import { BiStore } from "react-icons/bi";
@@ -5,8 +6,13 @@ import { BsDiscord, BsInstagram, BsTwitter, BsYoutube } from "react-icons/bs";
 import { CgMail } from "react-icons/cg";
 import Button from "../re-use/Button";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const path = usePathname();
+
+  const isRegister = () => path === "/register" || path.includes("register");
+
   return (
     <div className="w-full bg-[#3b3b3b] ">
       <Container className="xl:min-h-[300px] 2xl:min-h-[300px] min-h-[300px]">
@@ -65,14 +71,16 @@ const Footer = () => {
             &copy; advancing together. we support eco-friendly initiatives.
           </div>
 
-          <Image
-            src={"/assets/foot_img.png"}
-            width={100}
-            unoptimized
-            height={100}
-            alt="Foot Image"
-            className="w-auto"
-          />
+          {isRegister() && (
+            <Image
+              src={"/assets/foot_img.png"}
+              width={100}
+              unoptimized
+              height={100}
+              alt="Foot Image"
+              className="w-auto"
+            />
+          )}
         </div>
       </Container>
     </div>
